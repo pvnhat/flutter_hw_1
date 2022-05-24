@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homework1/register_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key, required this.title}) : super(key: key);
@@ -29,7 +30,7 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               const SizedBox(
-                height: 45,
+                height: 46,
               ),
               Image.asset(
                 'assets/images/ic_logo.png',
@@ -249,7 +250,16 @@ class _LoginPageState extends State<LoginPage> {
                             color: Colors.white,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const RegisterPage(
+                                title: 'Register',
+                              ),
+                            ),
+                          );
+                        },
                       ),
                     ),
                   ],
